@@ -50,11 +50,11 @@ namespace Triangles
             // Otherwise, return an empty string
             if (!(String.IsNullOrEmpty(a) || String.IsNullOrEmpty(b) || String.IsNullOrEmpty(c)))
             {
-                int aVal, bVal, cVal;
+                double aVal, bVal, cVal;
 
                 // Attempt to read the text values and store their values in the appropriate integer
                 // If that fails, then one of the textboxes isn't a number, and is thus invalid
-                if (int.TryParse(a, out aVal) && int.TryParse(b, out bVal) && int.TryParse(c, out cVal))
+                if (double.TryParse(a, out aVal) && double.TryParse(b, out bVal) && double.TryParse(c, out cVal))
                 {
                     // Make sure the values can produce a triangle
                     // Continue if they can, or return that they can't
@@ -116,11 +116,11 @@ namespace Triangles
          * Use the law of cosines (c2 = a2 + b2 - 2ab cos(angle)) to determine the angles and thus
          * what classifications it will get
          * 
-         * int A - Side A of a triangle
-         * int B - Side B of a triangle
-         * int C - Side C of a triangle
+         * double A - Side A of a triangle
+         * double B - Side B of a triangle
+         * double C - Side C of a triangle
          */
-        private double lawOfCosines(int A, int B, int C)
+        private double lawOfCosines(double A, double B, double C)
         {
             double step1 = C*C - A*A - B*B;
             double step2 = step1 / (-2*A*B);
@@ -128,29 +128,29 @@ namespace Triangles
         }
 
         /*
-         * Determine if a string contains only numbers
+         * Determine if a string contains only numbers (1 decimal allowed)
          * String text - The input text
          */
         private bool NumbersOnlyMatch(String text)
         {
-            Regex allowed = new Regex("[^0-9]+");
-            return !allowed.IsMatch(text);
+            Regex allowed = new Regex("^\\d*\\.?\\d*$");
+            return allowed.IsMatch(text);
         }
 
         /*
-         * Only allow a side length textbox to contain numbers
+         * Only allow a side length textbox to contain numbers (1 decimal allowed)
          */
         private void NumbersOnly(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = !NumbersOnlyMatch(e.Text);
+            e.Handled = !NumbersOnlyMatch(((TextBox)sender).Text + e.Text);
         }
 
         /*
-         * Only allow pasting to a side length textbox if it is a whole number
+         * Only allow pasting to a side length textbox if it would create a number (1 decimal allowed)
          */
         private void NumbersOnly(object sender, DataObjectPastingEventArgs e)
         {
-            if (!NumbersOnlyMatch(e.SourceDataObject.GetData(DataFormats.UnicodeText) as string))
+            if (!NumbersOnlyMatch(((TextBox)sender).Text + e.SourceDataObject.GetData(DataFormats.UnicodeText) as string))
             {
                 e.CancelCommand();
             }

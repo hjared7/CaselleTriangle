@@ -1,0 +1,15 @@
+C:\Users\jared\Desktop\Caselle Project\Triangles\bin\Debug\Triangles.exe.config
+C:\Users\jared\Desktop\Caselle Project\Triangles\bin\Debug\Triangles.exe
+C:\Users\jared\Desktop\Caselle Project\Triangles\bin\Debug\Triangles.pdb
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.csprojAssemblyReference.cache
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\MainWindow.g.cs
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\App.g.cs
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles_MarkupCompile.cache
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles_MarkupCompile.lref
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\MainWindow.baml
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.g.resources
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.Properties.Resources.resources
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.csproj.GenerateResource.cache
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.csproj.CoreCompileInputs.cache
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.exe
+C:\Users\jared\Desktop\Caselle Project\Triangles\obj\Debug\Triangles.pdb
